@@ -90,6 +90,9 @@ jobs:
   scan:
     name: Security Scan
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
     needs: [build-and-push]
     if: github.ref == 'refs/heads/main'
     
